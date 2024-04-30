@@ -3,10 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
-
 	"github.com/go-chi/chi"
 )
 
+type User struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
 
 func main() {
 	r := chi.NewRouter()
@@ -26,3 +29,4 @@ func main() {
 		fmt.Printf("Error starting server: %s\n", err)
 	}
 }
+
