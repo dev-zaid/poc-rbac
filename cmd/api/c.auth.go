@@ -16,7 +16,7 @@ func signupHandler(w http.ResponseWriter, r *http.Request) {
 	// Process the new user (e.g., save to database)
 
 	response := map[string]string{"message": "Signup successful"}
-	helper.jsonResponse(w, http.StatusCreated, response)
+	helper.JsonResponse(w, http.StatusCreated, response)
 }
 
 func loginHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,5 +29,5 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	// Authenticate the user (e.g., check credentials against a database)
 
 	response := map[string]string{"message": "Login successful"}
-	helper.jsonResponse(w, http.StatusOK, response)
+	helper.JsonResponse(w, http.StatusOK, response)
 }

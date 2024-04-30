@@ -23,7 +23,7 @@ func main() {
     r.Post("/login", loginHandler)
 
 	// Start the server
-	port := 8080
+	port := 8081
 	fmt.Printf("Starting server on port %d...\n", port)
 	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), r); err != nil {
 		fmt.Printf("Error starting server: %s\n", err)
